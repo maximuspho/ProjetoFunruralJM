@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtor Rural</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="./imagens/icon-50x50-3.jpg" alt="Logo Rural" width="50" height="50">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="icon-dashboard">Dashboard</a></li>
+                <li><a href="#" class="icon-add active">Lançar</a></li>
+                <li><a href="#" class="icon-list">Listagem</a></li>
+                <li><a href="#" class="icon-chart">Relatórios</a></li>
+                <li><a href="#" class="icon-settings">Configurações</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <img src="./imagens/github_apps_platform_icon_176077.svg" alt="Avatar" class="avatar">
+            <span>Usuário</span>
+        </div>
+    </aside>
+
+    <div class="content">
+        <header>
+            <div class="header-content">
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button class="search-button">Buscar</button>
+                </div>
+                <div class="notifications">
+                    <button class="notification-button">🔔</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="form-display-container">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="produtor">Digite o Produtor Rural:</label>
+                    <input type="text" id="produtor" name="produtor" placeholder="Nome do Produtor">
+                </div>
+
+                <div class="form-group">
+                    <label for="valor">Valor da nota:</label>
+                    <input type="number" id="valor" name="valor" placeholder="Digite o valor" step="0.01">
+                </div>
+
+                <button onclick="adicionarProdutor()" class="gravar-button">Gravar</button>
+                <button onclick="limparLista()" class="gravar-button">Limpar</button>
+                <button onclick="gerarRelatorioProdutores()" class="gravar-button">Relatorio</button>
+            </div>
+
+            <div class="display-section">
+                <p id="mensagem"></p>
+                <ul id="listaTarefas" class="stilus"></ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 - Sistema WSilveira v1.0</p>
+            <p>Desenvolvido por Wilson C.Silveira, Pinhão, PR</p>
+        </footer>
+    </div>
+
+<script src="script.js"></script>
+</body>
+
+</html>

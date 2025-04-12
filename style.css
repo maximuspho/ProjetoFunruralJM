@@ -1,0 +1,372 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Tom mais claro */
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color:  #8b9dc3;
+}
+
+/* Estilos da Sidebar (Menu Vertical Moderno) */
+.sidebar {
+    background: linear-gradient(135deg, #3b5998, #8b9dc3); /* Gradiente moderno */
+    color: #fff;
+    width: 220px; /* Largura ligeiramente menor */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    border-radius: 0 15px 15px 0; /* Bordas arredondadas */
+}
+
+.sidebar .logo {
+    margin-bottom: 35px;
+}
+
+.sidebar .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 18px;
+    text-decoration: none;
+    color: #e0f2f7; /* Tom mais claro para o texto */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.sidebar nav ul li a.active {
+    background-color: #2196f3; /* Cor de destaque */
+    color: #fff;
+    font-weight: bold;
+}
+
+.sidebar nav ul li a::before {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.icon-dashboard::before { content: "\f0e4"; } /* Exemplo usando Font Awesome */
+.icon-add::before { content: "\f067"; }
+.icon-list::before { content: "\f03a"; }
+.icon-chart::before { content: "\f080"; }
+.icon-settings::before { content: "\f013"; }
+
+.sidebar .user-info {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .user-info .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar .user-info span {
+    font-size: 0.9em;
+}
+
+/* Estilos do Conteúdo Principal Moderno */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-bar .search-button {
+    background-color: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar .search-button:hover {
+    background-color: #1976d2;
+}
+
+.notifications .notification-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.notifications .notification-button:hover {
+    color: #2196f3;
+}
+
+main.form-display-container {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.form-section {
+    flex: 1;
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+}
+
+.display-section {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.display-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.display-section div {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.display-section div span {
+    font-weight: bold;
+    color: #2196f3;
+}
+
+.form-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section .form-group {
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-section input[type="text"],
+.form-section input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-section input[type="text"]:focus,
+.form-section input[type="number"]:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+.form-section .gravar-button {
+    background-color: #4caf50; /* Cor verde para gravar */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.form-section .gravar-button:hover {
+    background-color: #43a047;
+}
+
+footer {
+    background-color: #333;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Estilos para Responsividade (Opcional) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-radius: 0;
+    }
+
+    .sidebar .logo {
+        margin-bottom: 0;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        overflow-x: auto; /* Permite rolagem horizontal se muitos itens */
+    }
+
+    .sidebar nav ul li a {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+    .sidebar .user-info {
+        display: none; /* Oculta informações do usuário em telas menores */
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 60px;
+    }
+
+    main.form-display-container {
+        flex-direction: column;
+        margin: 15px;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .form-section {
+        padding-right: 0;
+        border-right: none;
+    }
+
+    .display-section {
+        padding-left: 0;
+    }
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+ul li {
+    background-color: #F4F0EA;
+    color: #331F19;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button.remover {
+    background-color: #A34743;
+    color: #F4F0EA;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button.remover:hover {
+    background-color: #60041A;
+}
+
+.stilus {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #331F19;
+}
+
+button.editar {
+    background-color: #8d500a9f;
+    color: #F4F0EA;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.6em;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+button.editar:hover {
+    background-color: #60041A;
+    color: #F4F0EA;
+}
+
+.botao_lista {
+    background-color: #A34743;
+}
+
+.botao_lista:hover {
+    background-color: #60041A;
+    color: #F4F0EA;
+}
